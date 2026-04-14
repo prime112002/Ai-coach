@@ -35,11 +35,42 @@ main {
 .projects {
   display: flex;
   gap: 15px;
+  flex-direction: column;
   justify-content: center;
 }
 
+/* fix 1 — article background */
 article {
-  background-color: rgb(0, 0, 0);
+  background-color: #f4f4f4;
   padding: 20px;
   border-radius: 8px;
+  width: 100%;
+}
+
+/* fix 2 — mobile padding */
+main {
+  padding: 20px;
+}
+
+/* fix 3 — header alignment */
+header {
+  background-color: #1a1a2e;
+  color: antiquewhite;
+  padding: 20px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  header {
+    text-align: left;
+  }
+  main {
+    padding: 40px;
+  }
+  .projects {
+    flex-direction: row;
+  }
+  .projects article {
+    flex: 1;
+  }
 }
